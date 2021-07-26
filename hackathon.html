@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>NCR SSCO RemoteAssitance</title>
+      <script type="text/javascript" src="https://arvia.chat/js/arvia.chat.js" ></script>
+      <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+          font: 400 15px/1.8 "Lato", sans-serif;
+          
+        }
+        
+        .bgimg-1{
+           position: relative;
+           opacity: 0.65;
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-image: url("https://jobs.cybertecz.in/wp-content/uploads/2019/12/DPA_NCRHeadqrts_05-1100x763.jpg");
+           height: 100%;
+           color: #777;
+        }
+        
+        h1 {
+          color: #000000;
+        }
+        </style>
+   </head>
+	
+   <body>
+    <div class="bgimg-1">
+        <img src = "NCRLogo.png" alt = "Test Image" />
+        <h1>NCR Self Serv CheckOut Remote Assistance</h1>
+        <button id="startButton" style="height: 32px">Start RemoteAssistance</button><br />
+        <div id="arvia.chat"></div>
+        <script type="text/javascript">
+
+        document.getElementById('startButton').addEventListener('click',
+      
+        function() {
+        var arviaChat = new ArviaChat();
+        arviaChat.setTestUser(true);
+        arviaChat.setRoomName("sco1");
+        arviaChat.init("arvia.chat");
+        arviaChat.connect();
+      }
+
+    );
+
+  </script>
+    </div>
+     
+   </body>
+</html>
+
+
+
+</head>
+<body>
+  
