@@ -40,8 +40,7 @@
         document.getElementById('startButton').addEventListener('click',
       
         function() {
-        var arviaChat = new ArviaChat();
-        //arviaChat.setTestUser(true);
+        var arviaChat = new ArviaChat('60ffd76faa5d6c4b60d4e170');
         arviaChat.setRoomName("sco1");
         arviaChat.init("arvia.chat");
         arviaChat.connect();
