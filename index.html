@@ -3,7 +3,17 @@
 
    <head>
       <title>NCR SSCO RemoteAssitance</title>
-      <script type="text/javascript" src="https://arvia.chat/js/arvia.chat.js" ></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src='https://8x8.vc/external_api.js' async></script>
+        <style>html, body, #jaas-container { height: 100%; }</style>
+        <script type="text/javascript">
+          window.onload = () => {
+            const api = new JitsiMeetExternalAPI("8x8.vc", {
+              roomName: "vpaas-magic-cookie-8f4b326f86ee407c954e270aa7fab4b6/SampleAppCapitalDemandsCampClosely",
+              parentNode: document.querySelector('#jaas-container')
+            });
+          }
+        </script>
       <style>
         body, html {
           height: 100%;
@@ -28,33 +38,13 @@
         }
         </style>
    </head>
+	
    <body>
     <div class="bgimg-1">
         <img src = "NCRLogo.png" alt = "Test Image" />
         <h1>NCR Self Serv CheckOut Remote Assistance</h1>
-        <button id="startButton" style="height: 32px">Start RemoteAssistance</button><br />
-        <div id="arvia.chat"></div>
-        <script type="text/javascript">
-
-        document.getElementById('startButton').addEventListener('click',
-      
-        function() {
-        var arviaChat = new ArviaChat('6100fe97fb30ea6df60fe079');
-        arviaChat.setRoomName("sco1");
-        arviaChat.init("arvia.chat");
-        arviaChat.connect();
-      }
-
-    );
-
-  </script>
-    </div>
+        <div id="jaas-container" />
+	</div>	
      
    </body>
 </html>
-
-
-
-</head>
-<body>
-  
